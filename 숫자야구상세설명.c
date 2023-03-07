@@ -8,6 +8,7 @@ int main()
 {
     srand(time(NULL)); // seed 값 설정
 
+
     int answer[3]; // 컴퓨터가 생성한 정답
     int guess[3]; // 사용자가 입력한 추측
     int strike, ball; // 스트라이크와 볼의 개수
