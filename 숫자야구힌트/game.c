@@ -117,23 +117,35 @@ void play_game(int random[], int not_random[], int user[], int* chance, int* try
     {
         for (int i = 0; i < 3; i++)
         {
-            if (user[i] == not_random[0])
+            if (user[i] == not_random[0])//not random = hint
             {
                 printf("%d는 확실히 없어요\n", user[i]);
                 return;
             }
         }
     }
+    /*for (int index = 0; index < 2; index++)
+    {
+        hint [index] = rand() % 10;
+        if (hint[index] == random[0] || hint[index] == random[1] || hint[index] == random[2])
+        {
+            index--;
+        }
+        if (index == 1 && hint[0] == hint[1]) //2번째 힌트
 
+            index--;
+
+    }*/
     if (*try_count == 4)
     {
         for (int i = 0; i < 3; i++)
         {
-            if (user[i] == not_random[0] || user[i] == not_random[1])
+            if (user[i] == not_random[0] || user[i] == not_random[1])//hint
             {
                 printf("%d는 확실히 없어요\n", user[i]);
-                return;
-            }
+                return; // 2번째에서 힌트준걸 4번째에도 한번 더 해준다. 왜냐면 유저가 
+                //똑같이 입력할수있으니까..그래서 ||를 쓴다. 
+            }//만약 힌트가 12고 유저가 123을 입력을했을때, 프린트는 어떻게 나오는걸까?
         }
     }
 
