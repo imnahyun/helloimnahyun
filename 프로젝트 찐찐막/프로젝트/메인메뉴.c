@@ -7,7 +7,7 @@
 
 int main() {
     system("COLOR 0F");
-    system("mode con cols=115 lines=50");
+    system("mode con cols=135 lines=50");
 
     playMusic("C:\\Users\\KB\\Desktop\\music.wav");
 
